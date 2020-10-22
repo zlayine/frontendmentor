@@ -131,6 +131,20 @@
 	padding: 10px 0;
 }
 
+.copyright {
+	position: fixed;
+	bottom: 0;
+	left: 42%;
+	text-align: center;
+	color: #fff;
+}
+
+.copyright a {
+	color: rgb(252, 143, 110);
+	text-decoration: none;
+	font-weight: 700;
+}
+
 @media(max-width: 700px){
 	.card {
 		flex-direction: column;
@@ -179,3 +193,4 @@
 		width: 100%;
 	}
 }
+
