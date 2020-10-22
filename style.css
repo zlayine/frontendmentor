@@ -1,0 +1,181 @@
+.faq-background {
+	background: linear-gradient(0deg, hsl(240, 73%, 65%) 0%, hsl(273, 75%, 66%) 100%);
+	background-repeat: no-repeat;
+	height: 100vh;
+	font-weight: 400;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+
+.card {
+	background-color: #fff;
+	border-radius: 20px;
+	width: 70%;
+	height: 400px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	border: 0;
+}
+
+.card .images{
+	width: 50%;
+	position: relative;
+}
+
+.images .img.mobile {
+	display: none;
+}
+
+.images .img.desktop {
+	display: block;
+}
+
+.images .img {
+	position: absolute;
+	width: 100%;
+	top: 40px;
+	left: -50px;
+}
+
+.box {
+	z-index: 5;
+    width: 11%;
+    position: absolute;
+    top: 43%;
+    left: 12%;
+}
+
+.images .img.pattern {
+	z-index: 3;
+	top: -245px;
+    width: 200%;
+    left: -460px;
+}
+
+.images .img.desk {
+	z-index: 4;
+	width: 100%;
+	left: -70px;
+}
+
+.card .content {
+	width: 50%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-top: 40px;
+}
+
+.card .content .title {
+	text-align: left;
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+.content .list{
+	width: 90%;
+}
+
+.content .list .item {
+	border-bottom: 1px solid hsl(240, 5%, 91%);
+	transition: 200ms all;
+}
+
+.content .list .item .head {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 15px 0;
+}
+
+.content .list .item .head .text {
+	color: hsl(237, 12%, 33%);
+	transition: 200ms all;
+}
+.content .list .item.active .head .text {
+	font-weight: 700;
+}
+
+.content .list .item .head:hover .text {
+	color: hsl(14, 88%, 65%);
+	cursor: pointer;
+}
+
+.content .list .item .head .icon {
+	transform: rotate(0deg);
+	transition: 200ms all;
+}
+
+.content .list .item.active .head .icon {
+	transform: rotate(180deg);
+}
+
+.content .list .item .body {
+	color: hsl(240, 6%, 50%);
+	transition: 200ms all;
+	font-size: 12px;
+	height: 0;
+	overflow: hidden;
+}
+
+.content .list .item.active .body {
+	height: auto;
+	padding: 10px 0;
+}
+
+@media(max-width: 700px){
+	.card {
+		flex-direction: column;
+		width: 90%;
+		height: 70%;
+		overflow: visible;
+	}
+
+	.card .images {
+		width: 100%;
+	}
+
+	.card .content {
+		width: 90%;
+		margin-top: 40%;
+		margin: auto;
+	}
+
+	.card .content .title {
+		text-align: center;
+	}
+
+	.images .img.mobile {
+		display: block;
+	}
+	
+	.images .img.desktop {
+		display: none;
+	}
+
+	.images .img.desk {
+		width: 90%;
+		left: -1%;
+		top: -110px;
+	}
+	.images .img.pattern {
+		width: 82%;
+		left: 7%;
+		top: 0;
+	}
+	.box {
+		display: none;
+	}
+
+	.content .list {
+		width: 100%;
+	}
+}
